@@ -1,12 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ammu Gaming</title>
+  <meta name="theme-color" content="#0b0b12">
+  <title>Ammu Gaming | YouTube Shorts</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,77 +18,236 @@
       color: white;
       text-align: center;
     }
+
     header {
-      padding: 30px 15px;
+      padding: 35px 15px;
       background: linear-gradient(135deg, #171747, #7c19bc);
     }
-    h1 { font-size: 36px; margin: 10px; }
-    .tagline { color: #ddd; }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 42px);
+      margin: 10px;
+    }
+
+    .tagline {
+      color: #ddd;
+    }
+
     .button {
       display: inline-block;
       background: #ff3040;
       color: white;
       text-decoration: none;
-      padding: 14px 22px;
-      margin: 10px;
+      padding: 13px 20px;
+      margin: 10px 5px;
       border-radius: 8px;
       font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
     }
-    .button:hover { background: #e51f30; }
-    main { padding: 25px 15px; }
+
+    .button:hover {
+      background: #e21d30;
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding: 20px 14px 30px;
+    }
+
     .card {
-      max-width: 500px;
-      margin: 20px auto;
+      max-width: 850px;
+      margin: 22px auto;
       padding: 22px;
       border: 1px solid #38384a;
       border-radius: 14px;
       background: #171722;
     }
-    footer { padding: 20px; color: #aaa; }
+
+    .shorts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .short-card {
+      background: #101019;
+      border: 1px solid #38384a;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .thumbnail-link {
+      display: block;
+      position: relative;
+      background: #222230;
+    }
+
+    .thumbnail {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+    }
+
+    .play-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #ff3040;
+      color: white;
+      font-size: 25px;
+      width: 58px;
+      height: 58px;
+      line-height: 58px;
+      border-radius: 50%;
+      box-shadow: 0 3px 15px #0008;
+    }
+
+    .short-info {
+      padding: 14px;
+    }
+
+    .short-info h3 {
+      margin: 3px 0 10px;
+    }
+
+    .short-info .button {
+      margin: 5px 0 0;
+    }
+
+    footer {
+      padding: 20px;
+      color: #aaa;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>AMMU GAMING</h1>
-    <p class="tagline">Gaming • Gameplay • Highlights</p>
+    <h1>🎮 AMMU GAMING</h1>
+    <p class="tagline">Gaming • Gameplay • Shorts</p>
+
     <a class="button"
        href="https://www.youtube.com/@ammuisliveyt"
-       target="_blank" rel="noopener noreferrer">
-       Watch on YouTube
+       target="_blank"
+       rel="noopener noreferrer">
+      ▶ Visit YouTube Channel
     </a>
   </header>
 
   <main>
-    <div class="card">
-      <h2>Welcome, Gamers!</h2>
-      <p>Welcome to my gaming website.</p>
-      <p>Yahan meri gaming videos aur latest highlights milengi.</p>
-    </div>
+    <section class="card">
+      <h2>Welcome, Gamers! 🔥</h2>
+      <p>Welcome to the official Ammu Gaming website!</p>
+      <p>Yahan dekho mere latest gaming Shorts and highlights.</p>
+    </section>
 
-    <div class="card">
-      <h2>Latest Videos</h2>
-      <p>My gaming videos yahan dekho!</p>
-      <p>Latest videos dekhne ke liye mere YouTube channel par jao.</p>
+    <section class="card">
+      <h2>🔥 Latest YouTube Shorts</h2>
+      <p>Thumbnail par tap karo aur Short dekho!</p>
+
+      <div class="shorts-grid">
+
+        <!-- Short 1 -->
+        <article class="short-card">
+          <a class="thumbnail-link"
+             href="https://youtube.com/shorts/SpHmQ5umHZw"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Watch Ammu Gaming Short 1">
+            <img class="thumbnail"
+                 src="https://img.youtube.com/vi/SpHmQ5umHZw/hqdefault.jpg"
+                 alt="Ammu Gaming Short 1 thumbnail"
+                 loading="lazy">
+            <span class="play-icon">▶</span>
+          </a>
+          <div class="short-info">
+            <h3>Gaming Short #1</h3>
+            <a class="button"
+               href="https://youtube.com/shorts/SpHmQ5umHZw"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch Short
+            </a>
+          </div>
+        </article>
+
+        <!-- Short 2 -->
+        <article class="short-card">
+          <a class="thumbnail-link"
+             href="https://youtube.com/shorts/taBoKN4kDkk"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Watch Ammu Gaming Short 2">
+            <img class="thumbnail"
+                 src="https://img.youtube.com/vi/taBoKN4kDkk/hqdefault.jpg"
+                 alt="Ammu Gaming Short 2 thumbnail"
+                 loading="lazy">
+            <span class="play-icon">▶</span>
+          </a>
+          <div class="short-info">
+            <h3>Gaming Short #2</h3>
+            <a class="button"
+               href="https://youtube.com/shorts/taBoKN4kDkk"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch Short
+            </a>
+          </div>
+        </article>
+
+        <!-- Short 3 -->
+        <article class="short-card">
+          <a class="thumbnail-link"
+             href="https://youtube.com/shorts/Ez6Dc1WmmPY"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Watch Ammu Gaming Short 3">
+            <img class="thumbnail"
+                 src="https://img.youtube.com/vi/Ez6Dc1WmmPY/hqdefault.jpg"
+                 alt="Ammu Gaming Short 3 thumbnail"
+                 loading="lazy">
+            <span class="play-icon">▶</span>
+          </a>
+          <div class="short-info">
+            <h3>Gaming Short #3</h3>
+            <a class="button"
+               href="https://youtube.com/shorts/Ez6Dc1WmmPY"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch Short
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="button"
+         href="https://www.youtube.com/@ammuisliveyt/shorts"
+         target="_blank"
+         rel="noopener noreferrer">
+        See All Shorts
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>About My Channel 🎯</h2>
+      <p>Gaming ka maza lo aur Ammu Gaming ko support karo!</p>
       <a class="button"
          href="https://www.youtube.com/@ammuisliveyt"
-         target="_blank" rel="noopener noreferrer">
-         Watch Latest Videos
+         target="_blank"
+         rel="noopener noreferrer">
+        Subscribe on YouTube
       </a>
-    </div>
-
-    <div class="card">
-      <h2>About My Channel</h2>
-      <p>Gaming ka maza lo aur channel ko support karo!</p>
-      <a class="button"
-         href="https://www.youtube.com/@ammuisliveyt"
-         target="_blank" rel="noopener noreferrer">
-         Visit Channel
-      </a>
-    </div>
+    </section>
   </main>
 
   <footer>
-    © 2026 Ammu Gaming
+    © 2026 Ammu Gaming | Keep Gaming! 🎮
   </footer>
 </body>
 </html>
